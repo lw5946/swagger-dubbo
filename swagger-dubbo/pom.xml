@@ -4,15 +4,18 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.deepoove</groupId>
+		<groupId>com.langxin</groupId>
 		<artifactId>swagger-dubbo-project</artifactId>
-		<version>2.0.1</version>
+		<version>3.0.0</version>
 	</parent>
 	<artifactId>swagger-dubbo</artifactId>
 	<packaging>jar</packaging>
 	<name>swagger-dubbo</name>
 	<url>http://maven.apache.org</url>
 	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
@@ -24,14 +27,20 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.alibaba</groupId>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-common</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
 			<artifactId>dubbo</artifactId>
-			<version>2.6.0</version>
-			<scope>provided</scope>
+			<version>2.7.1</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
-					<artifactId>spring</artifactId>
+					<artifactId>spring-context</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
